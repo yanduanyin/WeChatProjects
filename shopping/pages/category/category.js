@@ -23,8 +23,15 @@ Page({
       curIndex: e.currentTarget.dataset.index,
       toView: e.currentTarget.dataset.id
     })
-    
   },
+  scroll (e) {
+    console.log(e)
+    var top = e.detail.scrollTop
+    this.setData ({
+      viewscroll: top
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,7 +42,7 @@ Page({
       success(res) {
         console.log(res)
         self.setData({
-          detail:res.data
+          detail: res.data
         })
       }
     })

@@ -1,12 +1,13 @@
 <!--pages/category/category.wxml-->
 <view class="main">
   <view class="category-left">
-    <view class="cate-list {{curIndex === index ? 'on' : ''}}" wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab">
+    <view class="cate-list {{curIndex === index ? 'on' : ''}}" wx:for="{{category}}" wx:key="{{item.id}}" 
+    data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab">
       <!--bindtap来绑定点击事件 -->
       {{item.name}}
     </view>
   </view>
-  <scroll-view class="category-right" scroll-y scroll-into-view="{{toView}}" scroll-with-animation="true">
+  <scroll-view class="category-right" scroll-y scroll-into-view="{{toView}}" scroll-with-animation="true" bindscroll="scroll">
     <block wx:for="{{detail}}" wx:key="{{item.id}}">
       <view class="cate-box" id="{{item.id}}">
         <view class="cate-banner">
@@ -27,5 +28,10 @@
         </view>
        </view>
     </block>
+    <view class="scroll-lines">
+      <view class="scrollline1 {{viewscroll/10 === 228 ? 'showmove' : ''}}" 
+      style="height:{{viewscroll/29 + 150}}rpx"
+       bindtap="scrollMove"></view>
+    </view>
   </scroll-view>
 </view>

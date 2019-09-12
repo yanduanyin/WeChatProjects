@@ -1,5 +1,6 @@
 /* pages/category/category.wxss */
 page, .main {
+  position: relative;
   height: 100%;
 }
 .category-left {
@@ -82,3 +83,26 @@ page, .main {
 .product-list:nth-child(3n){
     margin-right: 0;
 }
+.scroll-lines {
+  background-color: rgb(129, 127, 127);
+  width: 15rpx;
+  height: 228rpx;
+  position: fixed;
+  top: 50%;right: 30rpx;
+  border-radius: 20rpx;
+}
+.scrollline1 {
+  background-color: red;
+  border-radius: 20rpx;
+  position: absolute;
+  top: 0;left: 0;
+  width: 15rpx;
+  height: 150rpx;
+}
+.showmove {
+  display: none;
+}
+/* .scroll-line2 {
+  background-color: red;
+
+} */

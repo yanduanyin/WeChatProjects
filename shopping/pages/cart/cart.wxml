@@ -11,7 +11,7 @@
         <text class="cart-pro-name">{{item.title}}</text>
         <text class="cart-pro-price">{{item.price}}</text>
         <view class="cart-count-box">
-          <text class="cart-count-down">-</text>
+          <text class="cart-count-down" bindtap="jianCount" data-index="{{index}}">-</text>
           <text class="cart-count-num">{{item.num}}</text>
           <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
         </view>

@@ -1,4 +1,5 @@
 <view class="main">
+<!-- 轮播图部分 -->
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item>

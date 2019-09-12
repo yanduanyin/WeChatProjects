@@ -10,6 +10,16 @@ Page({
     selectAllStatus:true,
     totalPrice:''
   },
+  selectList(e) {
+    console.log(e)
+    let index = e.currentTarget.dataset.index
+    let select = `carts[${index}].selected`
+    //该属性设置选项的当前状态，如果为 true，则该选项被选中。该属性的初始值来自 <option> 的 selected 属性。
+    this.setData({
+      [select]: !this.data.carts[index].selected
+    })
+    this.getTotalPrice()
+  },
   getTotalPrice() {
     let carts = this.data.carts
     let total = 0
@@ -21,15 +31,6 @@ Page({
     this.setData({
       totalPrice:total.toFixed(2)//保留两位小数
     })
-  },
-  selectList(e) {
-    console.log(e)
-    let index = e.currentTarget.dataset.index
-    let select = `carts[${index}].selected`
-    this.setData({
-      [select]: !this.data.carts[index].selected
-    })
-    this.getTotalPrice()
   },
   selectAll() {
     console.log(213)
@@ -71,6 +72,27 @@ Page({
       carts: carts
     })
     this.getTotalPrice() 
+  },
+  jianCount (e) {
+    const index = e.currentTarget.dataset.index
+    console.log(index)
+    let carts = this.data.carts  //获取列表
+    let num = carts[index].num
+    num -= 1
+    if(num > 0) {
+      carts[index].num = num
+    }else if(num === 0 ){
+      if(carts.length > 1) {
+        carts = carts.splice(index-1, 1)
+      }else {
+        carts.length = 0;//删除最后一个列表
+      }
+    
+    }
+    this.setData({
+      carts: carts
+    })
+    this.getTotalPrice()
   },
   /**
    * 生命周期函数--监听页面加载
