@@ -1,0 +1,25 @@
+/* pages/index/index.wxss */
+.wrapper {
+  width: 100%;
+}
+.content {
+  width: 100%;
+  padding: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box-big {
+  display: inline-block;
+  width: 45%;  
+  height: 300rpx;
+  /* border: 3rpx solid rgb(160, 180, 247); */
+  box-shadow: 20rpx 20rpx 30rpx #cbd4e0;
+  border-radius: 20rpx;
+  max-width: 45%;
+  min-width: 45%;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  color: #fff;
+}
+

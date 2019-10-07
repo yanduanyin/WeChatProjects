@@ -1,0 +1,58 @@
+<!--pages/myvolume/myvolume.wxml-->
+<van-tabs type="card" color="#000">
+  <van-tab title="未使用卷">
+    <view>
+      <van-card
+        price="2积分"
+        desc="描述信息"  
+        title="商品标题"
+        thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
+      >
+        <view slot="tags">
+          <van-tag plain type="danger">标签</van-tag>
+          <van-tag plain type="danger">标签</van-tag>
+        </view>
+        <view slot="footer">
+          <van-button size="mini">去使用</van-button>
+        </view>
+      </van-card>
+    </view>
+  </van-tab>
+  <van-tab title="已使用卷">
+    <view>
+      <van-card
+        price="2积分"
+        desc="描述信息"  
+        title="商品标题"
+        thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
+      >
+        <view slot="tags">
+          <van-tag plain type="danger">标签</van-tag>
+          <van-tag plain type="danger">标签</van-tag>
+        </view>
+        <view slot="footer">
+          <!-- <van-button size="mini">已使用</van-button> -->
+        </view>
+      </van-card>
+    </view>
+  </van-tab>
+  <van-tab title="我喜欢的卷">
+    <view>
+      <van-card
+        price="{{2}}积分"
+        desc="描述信息"  
+        title="商品标题"
+        thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
+      >
+        <view slot="tags">
+          <van-tag plain type="danger">标签1</van-tag>
+          <van-tag plain type="danger">标签2</van-tag>
+        </view>
+        <view slot="footer">
+          <van-button size="mini">去购买</van-button>
+        </view>
+      </van-card>
+    </view>
+  </van-tab>
+</van-tabs>
+

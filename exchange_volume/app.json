@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/rule/rule",
+    "pages/circle/circle",
+    "pages/interesting/interesting",
+    "pages/myvolume/myvolume",
+    "pages/mypurse/mypurse",
+    "pages/my-behavior/my-behavior"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱情兑换卷",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icons/home-g.png",
+        "selectedIconPath": "icons/zhuye.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/rule/rule",
+        "iconPath": "icons/qunfengshiyongguize.png",
+        "selectedIconPath": "icons/qunfengshiyongguize_1.png",
+        "text": "使用规则"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "icons/shuangrenzhiyuann.png",
+        "selectedIconPath": "icons/shuangrenzhiyuans.png",
+        "text": "我和她"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-row": "/miniprogram_npm/vant-weapp/row/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index",
+    "van-card": "/miniprogram_npm/vant-weapp/card/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index"
+  }
+}

@@ -1,0 +1,26 @@
+<!--pages/interesting/interesting.wxml-->
+<!-- 轮播图部分 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" 
+  interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view wx:for="{{coupon_data}}">
+  <van-card
+    price="{{item.price}}积分"
+    desc="{{item.desc}}"  
+    title="{{item.title}}"
+    thumb="{{item.thumb}}"
+  >
+    <view slot="tags">
+      <van-tag plain type="danger">{{item.coupon_type}}</van-tag>
+    </view>
+    <view slot="footer">
+      <van-button size="mini">购买</van-button>
+      <van-button size="mini">我喜欢</van-button>
+    </view>
+  </van-card>
+</view>

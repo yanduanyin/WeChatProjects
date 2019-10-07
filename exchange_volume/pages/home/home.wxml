@@ -1,0 +1,63 @@
+<!--pages/home/home.wxml-->
+<view class="wrapper">
+  <view class="top-box">
+    <image  style="width: 100%; height: 250rpx; " src='../../images/bg.jpg' mode="scaleToFill"/>
+    <view class="user-juan-box">
+      <view class="user-box">
+        <view class="user-left">
+          <image style="width: 90rpx; height: 90rpx; border-radius: 50px;" src="../../images/他.jpg" mode="scaleToFill"></image>
+          <text style="display: block;  text-align: center; font-size: 30rpx">他</text>
+        </view>
+        <view class="user-right">
+          <image style="width: 90rpx; height: 90rpx; border-radius: 50px;" src="../../images/她.jpg" mode="scaleToFill"></image>
+          <text style="display:block; text-align: center; font-size: 30rpx">她</text>
+        </view>
+      </view>
+      <view class="juan-box">
+        <view class="juan-bg">
+          <view class="num">9</view>
+          <text>未使用卷</text>
+        </view>
+        <view class="juan-bg">
+          <view class="num">9</view>
+          <text>已使用卷</text>
+        </view>
+        <view class="juan-bg">
+          <view class="num">9</view>
+          <text>喜欢的卷</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="lists-container">
+    <view class="item-box">
+      <text>她的信息</text>
+      <view class="text-right">
+        <text>未设置</text>
+        <view class="icon"></view>
+      </view>
+    </view>
+    <view class="item-box">
+      <text>绑定手机</text>
+      <view class="text-right">
+        <text>18676159097</text>
+        <view class="icon"></view>
+      </view>
+    </view>
+    <view class="item-box">
+      <text>提醒她兑现</text>
+      <view class="text-right">
+        <text>未设置</text>
+        <view class="icon"></view>
+      </view>
+    </view>
+    <view class="item-box">
+      <text>关于我们</text>
+      <view class="text-right">
+        <text></text>
+        <view class="icon"></view>
+      </view>
+    </view>
+  </view>
+</view>

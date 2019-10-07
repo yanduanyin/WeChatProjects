@@ -1,0 +1,72 @@
+<!--pages/circle/circle.wxml-->
+<text>兑换卷圈</text>
+<view class="head-container">
+  <van-row type="flex" justify="space-between">
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #f28652;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>日常甜蜜</text>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #f9bd3e;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>日常闹别扭</text>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #34a3ef;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>想出去走走</text>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #34a3ef;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>你我的梦</text>
+      </view>
+    </van-col>
+  </van-row>
+  <van-row type="flex" justify="space-between">
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #34a3ef;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>日常小活动</text>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #34a3ef;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>嘻嘻哈哈</text>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #f1834d;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>睡个懒觉</text>
+      </view>
+    </van-col>
+    <van-col span="6">
+      <view>
+        <view class="icon-bg" style="background-color: #cecece;">
+          <image style="width: 30rpx;height: 30rpx;" />
+        </view>
+        <text>更多</text>
+      </view>
+    </van-col>
+  </van-row>
+</view>
