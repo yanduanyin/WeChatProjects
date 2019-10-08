@@ -1,11 +1,12 @@
 // pages/details/details.js
+let ls_coupon_data_item
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    coupon_data_item: []
   },
 
   /**
@@ -15,8 +16,13 @@ Page({
     // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
     let eventChannel = this.getOpenerEventChannel();
     eventChannel.on('acceptDataFromOpenerPage', function(data) {
-    console.log(data)
-  })
+      // console.log(data)
+      ls_coupon_data_item = data
+    })
+    // console.log(ls_coupon_data_item.data)
+    this.setData({
+      coupon_data_item: ls_coupon_data_item.data
+    })
   },
 
   /**

@@ -1,19 +1,20 @@
 // pages/circle/circle.js
 var app = getApp();
+// 定义一些用来承载不同数据的全局变量
+let  coupon_data_item1= [],
+    coupon_data_item2= [],
+    coupon_data_item3= [],
+    coupon_data_item4= [],
+    coupon_data_item5= [],
+    coupon_data_item6= [],
+    coupon_data_item7= [],
+    coupon_data_item8= []
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    coupon_data_item1: [],
-    coupon_data_item2: [],
-    coupon_data_item3: [],
-    coupon_data_item4: [],
-    coupon_data_item5: [],
-    coupon_data_item6: [],
-    coupon_data_item7: [],
-    coupon_data_item8: []
   },
 
   /**
@@ -55,32 +56,22 @@ Page({
       }
     })
     // console.log(Aitem1)
-    this.setData({
-      coupon_data_item1: Aitem1,
-      coupon_data_item2: Aitem2,
-      coupon_data_item3: Aitem3,
-      coupon_data_item4: Aitem4,
-      coupon_data_item5: Aitem5,
-      coupon_data_item6: Aitem6,
-      coupon_data_item7: Aitem7,
-      coupon_data_item8: Aitem8
-    })
+      coupon_data_item1 = Aitem1,
+      coupon_data_item2 = Aitem2,
+      coupon_data_item3 = Aitem3,
+      coupon_data_item4 = Aitem4,
+      coupon_data_item5 = Aitem5,
+      coupon_data_item6 = Aitem6,
+      coupon_data_item7 = Aitem7,
+      coupon_data_item8 = Aitem8
   },
-  clickSort () {
+  clickSort (e) {
+    console.log(e)
     wx.navigateTo({
       url: '../details/details?id=1',
-      // events: {
-      //   // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-      //   acceptDataFromOpenedPage: function(data) {
-      //     console.log(data)
-      //   },
-      //   someEvent: function(data) {
-      //     console.log(data)
-      //   }
-      // },
-      success: function(res) {
+      success: (res) => {
         // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('acceptDataFromOpenerPage', {data: 'test'})
+        res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item1})
       }
     })
   },

@@ -1,6 +1,6 @@
 <!--pages/details/details.wxml-->
 <text>详情页</text>
-<view wx:for="{{coupon_data}}">
+<view wx:for="{{coupon_data_item}}">
   <van-card
     price="{{item.price}}积分"
     desc="{{item.desc}}"  
