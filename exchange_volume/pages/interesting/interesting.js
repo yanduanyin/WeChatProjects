@@ -1,6 +1,5 @@
 const app = getApp()
-const db = wx.cloud.database({})
-const coupon_data = db.collection('coupon_data')
+// const coupon_data = db.collection('coupon_data')
 Page({
   /**
    * 页面的初始数据
@@ -22,15 +21,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let that = this;
-    db.collection('coupon_data').get({
-      success(res) {
-        // console.log(res.data)
-        // console.log(that)
-        that.setData({
-          coupon_data: res.data
-        })
-      }
-    })
+    console.log(app.globalData.coupon_data)
+    this.setData({
+      coupon_data: app.globalData.coupon_data
+    });
   }
 })

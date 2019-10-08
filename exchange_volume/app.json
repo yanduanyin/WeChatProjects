@@ -7,7 +7,7 @@
     "pages/interesting/interesting",
     "pages/myvolume/myvolume",
     "pages/mypurse/mypurse",
-    "pages/my-behavior/my-behavior"
+    "pages/details/details"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,18 +1,22 @@
 // pages/circle/circle.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    coupon_data: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.globalData.coupon_data)
+    this.setData({
+      coupon_data: app.globalData.coupon_data
+    });
   },
 
   /**

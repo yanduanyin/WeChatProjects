@@ -3,7 +3,7 @@
 <view class="head-container">
   <van-row type="flex" justify="space-between">
     <van-col span="6">
-      <view>
+      <view bind:tap="clickSort">
         <view class="icon-bg" style="background-color: #f28652;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -11,7 +11,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view>
+      <view bindtab="">
         <view class="icon-bg" style="background-color: #f9bd3e;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
