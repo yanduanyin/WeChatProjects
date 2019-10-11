@@ -11,7 +11,7 @@
       <van-tag plain type="danger">{{item.coupon_type}}</van-tag>
     </view>
     <view slot="footer">
-      <van-button size="mini">购买</van-button>
+      <van-button size="mini" bindtap="clickBuy" data-index= "{{index + 1}}" >购买</van-button>
       <van-button size="mini">我喜欢</van-button>
     </view>
   </van-card>

@@ -13,10 +13,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.coupon_data)
-    this.setData({
-      coupon_data: app.globalData.coupon_data
-    });
+    let that = this;
+    wx.getStorage({
+      key: 'key1',
+      success: function(res) {
+        // 异步接口在success回调才能拿到返回值
+        // console.log(res.data)
+        app.globalData.NoUsed_data = res.data
+        // console.log(app.globalData.NoUsed_data)
+        that.setData({
+          coupon_data: app.globalData.NoUsed_data
+        });
+      },
+      fail: function() {
+        console.log('读取key发生错误')
+      }
+      
+    })
+    
+   
+  },
+  // 清除本地缓存
+  removeStorage: function() {
+    wx.removeStorage({
+      key:'key1',
+      success: function(res) {
+        console.log(res,'清除了本地缓存的数据')
+      }
+    })
   },
 
   /**

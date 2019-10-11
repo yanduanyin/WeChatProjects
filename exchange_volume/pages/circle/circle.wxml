@@ -3,7 +3,7 @@
 <view class="head-container">
   <van-row type="flex" justify="space-between">
     <van-col span="6">
-      <view bind:tap="clickSort">
+      <view bindtap="clickSort" data-index= "1">
         <view class="icon-bg" style="background-color: #f28652;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -11,7 +11,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view bindtab="">
+      <view bindtap="clickSort" data-index= "2">
         <view class="icon-bg" style="background-color: #f9bd3e;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -19,7 +19,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view>
+      <view bindtap="clickSort" data-index= "3">
         <view class="icon-bg" style="background-color: #34a3ef;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -27,7 +27,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view>
+      <view bindtap="clickSort" data-index= "4">
         <view class="icon-bg" style="background-color: #34a3ef;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -37,7 +37,7 @@
   </van-row>
   <van-row type="flex" justify="space-between">
     <van-col span="6">
-      <view>
+      <view bindtap="clickSort" data-index= "5">
         <view class="icon-bg" style="background-color: #34a3ef;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -45,7 +45,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view>
+      <view bindtap="clickSort" data-index= "6">
         <view class="icon-bg" style="background-color: #34a3ef;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -53,7 +53,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view>
+      <view bindtap="clickSort" data-index= "7">
         <view class="icon-bg" style="background-color: #f1834d;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>
@@ -61,7 +61,7 @@
       </view>
     </van-col>
     <van-col span="6">
-      <view>
+      <view bindtap="clickSort" data-index= "8">
         <view class="icon-bg" style="background-color: #cecece;">
           <image style="width: 30rpx;height: 30rpx;" />
         </view>

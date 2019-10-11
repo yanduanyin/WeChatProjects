@@ -1,16 +1,16 @@
 <!--pages/myvolume/myvolume.wxml-->
+<button bindtap="removeStorage">清除本地缓存</button>
 <van-tabs type="card" color="#000">
   <van-tab title="未使用卷">
-    <view>
+    <view wx:for="{{coupon_data}}">
       <van-card
-        price="2积分"
-        desc="描述信息"  
-        title="商品标题"
-        thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
+        price="{{item.price}}积分"
+        desc="{{item.desc}}"  
+        title="{{item.title}}"
+        thumb="{{item.thumb}}"
       >
         <view slot="tags">
-          <van-tag plain type="danger">标签</van-tag>
-          <van-tag plain type="danger">标签</van-tag>
+          <van-tag plain type="danger">{{item.coupon_type}}</van-tag>
         </view>
         <view slot="footer">
           <van-button size="mini">去使用</van-button>

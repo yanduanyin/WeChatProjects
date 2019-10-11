@@ -30,25 +30,25 @@ Page({
       // console.log(item.coupon_type)
       _type = item.coupon_type
       switch(_type){
-        case 1 :
+        case '日常甜蜜' :
           Aitem1.push(item);
            break; //可选
-        case 2 :
+        case '日常闹别扭' :
           Aitem2.push(item);
            break; //可选
-        case 3 :
+        case '想出去走走' :
           Aitem3.push(item);
            break; //可选
-        case 4 :
+        case '你我的梦' :
           Aitem4.push(item);
            break; //可选
-        case 5 :
+        case '日常小活动' :
           Aitem5.push(item);
            break; //可选
-        case 6 :
+        case '嘻嘻哈哈' :
           Aitem6.push(item);
            break; //可选
-        case 7 :
+        case '睡个懒觉' :
           Aitem7.push(item);
            break; //可选
         default : //可选
@@ -66,12 +66,39 @@ Page({
       coupon_data_item8 = Aitem8
   },
   clickSort (e) {
-    console.log(e)
+    // console.log(e)
+    let index = e.currentTarget.dataset.index
+    // console.log(index)
     wx.navigateTo({
       url: '../details/details?id=1',
       success: (res) => {
         // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item1})
+        // console.log(index)
+        switch(index){
+          case '1' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item1})
+             break; //可选
+          case '2' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item2})
+             break; //可选
+          case '3' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item3})
+             break; //可选
+          case '4' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item4})
+             break; //可选
+          case '5' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item5})
+             break; //可选
+          case '6' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item6})
+             break; //可选
+          case '7' :
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item7})
+             break; //可选
+          default : //可选
+            res.eventChannel.emit('acceptDataFromOpenerPage', {data: coupon_data_item8})
+        }
       }
     })
   },
