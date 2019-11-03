@@ -1,2 +1,12 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<scoll-view scoll-y="true" enable-back-to-top="true">
+  <view class="footer-bar">
+    <view class="footer-back" >
+      <image src="../../images/changyongicon-.png" mode="scaleToFill"></image>
+    </view>
+    <text class="footer-text">下一篇</text>
+    <view class="footer-share"> 
+      <image src="../../images/fenxiang.png"></image>
+    </view>
+  </view>
+</scoll-view>

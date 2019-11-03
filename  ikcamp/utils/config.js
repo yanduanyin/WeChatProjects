@@ -22,8 +22,8 @@ let core = {
   defaultShareText: defaultShareText['en'],
   defaultBarTitle: defaultBarTitle['en'],
   defaultImg: defaultImg,
-  isDev: env === 'dev',
-  isProduction: env === 'production'
+  isDev: env === 'dev',//true
+  isProduction: env === 'production'  //false
 }
 
 export default core 

@@ -25,7 +25,7 @@ let handler = {
       mock: true,
       data: {
         tag: '微信热门',
-        start: this.data.page || 1,
+        start: this.data.page || 1,//|| 1  提高容错性
         days: this.data.days || 3,
         pageSize: this.data.pageSize,
         langs: config.appLang || 'en'
@@ -80,7 +80,7 @@ let handler = {
   formatArticleData(data) {
     let formatData = undefined
     if(data && data.length) {
-      formatData = data.map((group) => {
+      formatData = data.map((group) => {//map 遍历数组
         group.formateData = this.dateConvert(group.date)
         return group
       })
@@ -104,6 +104,17 @@ let handler = {
       })
       this.requestAticle()
     }
+  },
+  showDetail:function(e) {
+    console.log(e);
+    let dataset = e.currentTarget.dataset;
+    console.log(dataset);
+    let item = dataset && dataset.item;
+    let contentId = item.contentId || 0;
+    wx.navigateTo({
+      url:`../detail/detail?contentId=${contentId}`
+    });
+
   }
 }
 Page(handler)
