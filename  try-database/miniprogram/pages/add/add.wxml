@@ -1,2 +1,2 @@
-<vant-button  square block bind:click="addData">新增数据
+<vant-button  square block bind:click="addData">增数据
 </vant-button>
